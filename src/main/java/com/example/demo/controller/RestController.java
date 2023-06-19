@@ -23,6 +23,10 @@ public class RestController {
         patient= restService.createUser(patient);
         return ResponseEntity.status(HttpStatus.OK).body(patient);
     }
+   @GetMapping("/test")
+    public String test() {
+        return "in AWS";
+    }
     @GetMapping("/api/users")
     public List<Patient> getAll() {
         return restService.getAllUsers();
